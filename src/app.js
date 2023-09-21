@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-// Routes are defined in the routes module
-app.use('/api/v1', routes);
-
 // Using Morgan for HTTP request logging
 app.use(morgan('combined'));
+
+// Routes are defined in the routes module
+app.use('/api/v1', routes);
 
 app.listen(PORT, () => {
   logger.info(`Server is running on port ${PORT}`);
