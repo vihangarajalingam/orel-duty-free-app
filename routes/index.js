@@ -1,10 +1,9 @@
 import express from 'express';
+import createShopHandler from '../middleware/shopHandler.js';
 
 const router = express.Router();
 
 router.route('/get/shops')
-  .get((req, res) => {
-    res.json({ "success": true }).status(200);
-  });
+  .get(createShopHandler);
 
 export default router;    
