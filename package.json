@@ -1,0 +1,27 @@
+{
+  "name": "orel-duty-free-app",
+  "version": "1.0.0",
+  "description": "E Commerce application for a duty free shop",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vihangarajalingam/orel-duty-free-app.git"
+  },
+  "author": "Vihanga Rajalingam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vihangarajalingam/orel-duty-free-app/issues"
+  },
+  "homepage": "https://github.com/vihangarajalingam/orel-duty-free-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "joi": "^17.10.2",
+    "morgan": "^1.10.0",
+    "winston": "^3.10.0"
+  }
+}
