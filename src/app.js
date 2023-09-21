@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import mongoose from 'mongoose';
 import routes from '../routes/index.js';
 import logger from '../utils/logger.js';
+import { mongoURL } from '../config/db.config.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,9 +22,7 @@ app.listen(PORT, () => {
 });
 
 // Connect to DB
-mongoose.connect('mongodb://127.0.0.1:27017/orel', {
-    socketTimeoutMS: 0
-});
+mongoose.connect(mongoURL, { socketTimeoutMS: 0 });
 
 mongoose.connection.on('open', () => {
     logger.info('Database connection successful');
